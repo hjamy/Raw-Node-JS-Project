@@ -1,5 +1,6 @@
 //dependencies
 const http = require('http');
+const {handleReqRes} = require('./helpers/handleReqRes');
 
 // app object - module scuffholding
 const app = {};
@@ -18,9 +19,7 @@ app.createServer = () =>{
 }
 
 //Handle Request, Response
-app.handleReqRes = (req, res) =>{
-    res.end('Hello World!!!!');
-}
+app.handleReqRes = handleReqRes;
 
 //Start the server
 app.createServer();
